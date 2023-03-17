@@ -1,0 +1,38 @@
+{% extends 'patienthome.html' %}
+{% block content %}
+<style>
+  .container {
+        height: 200px;
+        width: 380px;
+        position: absolute;
+        top: 70%;
+        left: 70%;
+        margin-top: -100px;
+        margin-left: 150px;
+        color: #FFF;
+        font-family: Roboto;
+        font-weight: 300;
+        }
+       
+  .container {
+            top: 50%;
+            left: 50%;
+            margin-top: -100px;
+            margin-left: -190px;
+            text-align: center;
+        }
+        
+</style>
+    <div class="container">
+        <form method="post">
+            <div class="mb-3">
+              <label for="text" class="form-label">Question</label>
+              <input type="text" name="question" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">Please ask a question</div>
+            </div>
+            <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+          </form>
+
+    </div>
+
+{% endblock %}

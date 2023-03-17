@@ -1,0 +1,57 @@
+{% extends "login.html" %} 
+
+{% block content %}
+<h2>Register</h2>
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+      <h2 style="color: red;">{{message}}</h2>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+<form method="post" >
+    <div class="user-box">
+        <input type="text" name="username" required="">
+        <label>User Name</label>
+      </div>
+  <div class="user-box">
+    <input type="email" name="email" required="">
+    <label>Email</label>
+  </div>
+  <!-- <label for="usertype">User Type</label>
+  <select name="usertype" id="">
+    <option value="",selected disabled>Select</option>
+    <option value="doctor">Doctor</option>
+    <option value="patient">Patient</option>
+  </select>  -->
+ <label for="usertype">User Type</label>
+ <select name="usertype" id="">
+    <option value="",selected disabled>Select</option>
+    <option value="doctor">Doctor</option>
+    <option value="patient">Patient</option>
+ </select>
+  
+  <div class="user-box">
+    <input type="text" name="password" required="">
+    <label>Password</label>
+  </div>
+  <div class="user-box">
+    <input type="text" name="" required="">
+    <label>Confirm Password</label>
+  </div>
+  <div class="user-box">
+    <input type="submit" name="submit" required="">
+    <label>Signup</label>
+  </div>
+
+  <a href="#">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <a href="/">Signup</a> 
+  </a>
+</form>
+
+{% endblock %}

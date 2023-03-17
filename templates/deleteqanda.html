@@ -1,0 +1,28 @@
+{% extends "teacherhome.html" %} 
+{% block content %}
+
+<div class="container mt-5">
+    <table class="table table-striped bg-white">
+        <tr>
+            <th>Date</th>
+            <th>Question</th>
+            <th>Answer</th>
+            <th>Action</th>
+        </tr>
+{% for item in res %}
+        <tr>
+            <td>{{item["date"]}}</td>
+            <td>{{item["question"]}}</td>
+            <td>{{item["answer"]}}</td>
+        <form method="post">
+            <td><button name="submit" type="submit" class="btn btn-warning" value="{{item['id']}}">delete</button></td>
+        </form>
+        </tr>
+
+{% endfor %}
+
+    </table>
+</div>
+
+{% endblock %}
+ 
